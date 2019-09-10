@@ -82,4 +82,3 @@ function createPost(event) {
         console.log(err);
     })
 }
-Collapse
