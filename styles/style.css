@@ -1,22 +1,26 @@
 
 .header {
-  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  width: 1300px;
+  height: 150px;
   background: url('avine.jpg');
-  background-repeat: no-repeat;
-  background-size: 75%;
-  display: inline-block;
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 h1 {
   font-family: "Eczar",sans-serif;
-  color: purple;
-}
-.flex-container-wrapper {
-  display: flex;
+  color: #e8fc4a;
+  font-size: 64px;
+  text-align: center;
 }
 
-main {
-    background: lightgray;
+.container {
+  display: flex;
+  font-family: "Gayathri",sans-serif;
 }
 
 
@@ -25,15 +29,16 @@ main {
 }
 
 .content {
-    background: lightgray;
+    background: lightblue;
 }
 
 .sidebar {
     border: 1px solid #000000;
-    background: #673ab7;
+    background: lightyellow;
 }
 
 .footer {
     border: 1px solid #000000;
-    background: #616161;
+    background: lightgray;
+    text-align: center;
 }
