@@ -1,24 +1,31 @@
-main, header, section, aside, footer {
-    margin: 0;
-    padding: rem-calc(20);
-    border: 1px solid #000000;
-    color: #ffffff;
+
+.header {
+  width: 100%;
+  background: url('avine.jpg');
+  background-repeat: no-repeat;
+  background-size: 75%;
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Eczar",sans-serif;
+  color: purple;
+}
+.flex-container-wrapper {
+  display: flex;
 }
 
 main {
-    background: #000000;
+    background: lightgray;
 }
 
-.header {
-    background: #03a9f4;
-}
 
 .hero {
-    background: #d22b1f;
+    background: lightgray;
 }
 
 .content {
-    background: #129a22;
+    background: lightgray;
 }
 
 .sidebar {

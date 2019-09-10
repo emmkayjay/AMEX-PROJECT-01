@@ -1,3 +1,5 @@
+const login;
+
 function postData(event) {
    event.preventDefault();
    const email = document.querySelector('.email');
@@ -19,7 +21,7 @@ function postData(event) {
    })
    .then((res) => {
        localStorage.setItem('user', res.token);
-       createPost();
+       // createPost();
    })
    .catch((err) => {
        console.log(err);
