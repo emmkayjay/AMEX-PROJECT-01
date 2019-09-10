@@ -41,10 +41,27 @@
 
                 <!-- Sidebar -->
                 <aside class="sidebar">
-                    Sidebar
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum!
-                    </p>
+                  <form
+                      onSubmit="postData(event)"
+                      class="signupForm"
+                  >
+                      <input
+                          type="text"
+                          class="email"
+                          placeholder="email"
+                      />
+                      <input
+                          type="password"
+                          class="password"
+                          placeholder="password"
+                      />
+                      <input
+                          type="text"
+                          class="username"
+                          placeholder="username"
+                      />
+                      <input type="submit" />
+                  </form>
                 </aside>
 
             </div>
@@ -59,27 +76,7 @@
 
         </main>
 
-        <form
-            onSubmit="postData(event)"
-            class="signupForm"
-        >
-            <input
-                type="text"
-                class="email"
-                placeholder="email"
-            />
-            <input
-                type="password"
-                class="password"
-                placeholder="password"
-            />
-            <input
-                type="text"
-                class="username"
-                placeholder="username"
-            />
-            <input type="submit" />
-        </form>
+
         <form
             onSubmit = "createPost(event)"
             class="postForm"
@@ -98,6 +95,5 @@
         </form>
         <ul class="posts">
         </ul>
-        <script src="./script.js"></script>
+        <script src="./js/script.js"></script>
     </body>
-
