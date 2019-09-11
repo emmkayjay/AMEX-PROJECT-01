@@ -81,12 +81,10 @@ function createPost(event) {
        console.log(err);
    })
 }
-
 function createLogin(event) {
    event.preventDefault();
    const email = document.querySelector('.email');
    const password = document.querySelector('.password');
-
    fetch('http://thesi.generalassemb.ly:8080/login', {
            method: 'POST',
            headers: {
@@ -101,7 +99,6 @@ function createLogin(event) {
        return res.json();
        console(log);
    })
-
    .catch((err) => {
        console.log(err);
      })
