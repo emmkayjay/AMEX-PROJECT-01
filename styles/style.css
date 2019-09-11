@@ -1,44 +1,39 @@
-
+main, header, section, aside, footer {
+    margin: 0;
+    padding: rem-calc(20);
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+.main {
+    background: red;
+}
 .header {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  width: 1300px;
-  height: 150px;
-  background: url('avine.jpg');
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: center;
+    background: #03a9f4;
 }
-
-h1 {
-  font-family: "Eczar",sans-serif;
-  color: #e8fc4a;
-  font-size: 64px;
-  text-align: center;
+.sub-heading {
+    background: #d22b1f;
 }
-
-.container {
-  display: flex;
-  font-family: "Gayathri",sans-serif;
-}
-
-
-.hero {
-    background: lightgray;
-}
-
 .content {
-    background: lightblue;
+    background: #129a22;
+    flex: 1
 }
-
 .sidebar {
     border: 1px solid #000000;
-    background: lightyellow;
+    background: #673ab7;
 }
-
 .footer {
     border: 1px solid #000000;
-    background: lightgray;
-    text-align: center;
+    background: #616161;
+}
+.flex-container {
+    @media screen and (min-width: 640px){
+        display: flex;
+    }
+.content {
+        flex: 1;
+        ...
+  }
+.sidebar {
+        flex: 0 1 300px;
+        ...
 }
