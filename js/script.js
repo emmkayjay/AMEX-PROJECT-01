@@ -79,9 +79,24 @@ function createProfile(event) {
      })
 
      .then((res) => {
-         localStorage.setItem('user', res.token);
-         console.log(res)
-         //localStorage.setItem('name', res.username);
+        localStorage.setItem('user', res.token);
+        console.log(res);
+        localStorage.setItem('user', res.token);
+          if(res.httpStatus !== 'BAD_REQUEST') {
+            window.location.href = "content-page.html";
+            }else{
+              localStorage.clear();
+            }
+
+
+
+
+
+        //localStorage.setItem('name', res.username);
+            //if (res.username) {
+            //document.querySelector('.signupForm').style.display = "none";
+            //document.querySelector('h3').innerText = 'Welcome to the Upside Down';
+            //}
          //const printUserName =document.querySelector('.username');
            //userName=test.userName;
            //manipulateDom(`${userName}`)
