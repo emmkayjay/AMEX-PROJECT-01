@@ -1,63 +1,67 @@
-function postData(event) {
-   event.preventDefault();
-   const email = document.querySelector('.email');
-   const password = document.querySelector('.password');
-   const username = document.querySelector('.username');
-   fetch('http://thesi.generalassemb.ly:8080/signup', {
-           method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               email: email.value,
-               password: password.value,
-               username: username.value
-           })
-   })
-   .then((res) => {
-       return res.json();
-       console.log(res);
-   })
+    function postData(event) {
+     event.preventDefault();
+     const email = document.querySelector('.email');
+     const password = document.querySelector('.password');
+     const username = document.querySelector('.username');
+     fetch('http://thesi.generalassemb.ly:8080/signup', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 email: email.value,
+                 password: password.value,
+                 username: username.value
+             })
+     })
+     .then((res) => {
+         return res.json();
+         console.log(res);
+     })
 
-   .then((res) => {
-       localStorage.setItem('user', res.token);
-       console.log(res)
-       //createPost();
-   })
+     .then((res) => {
+         localStorage.setItem('user', res.token);
+         console.log(res)
+         //localStorage.setItem('name', res.username);
+         //const printUserName =document.querySelector('.username');
+           //userName=test.userName;
+           //manipulateDom(`${userName}`)
+         //createPost();
+     })
 
-   .catch((err) => {
-       console.log(err);
-   })
-}
+     .catch((err) => {
+         console.log(err);
+     })
+  }
 
-function updateDom() {
-   document.querySelector('.signupForm').style.display = "none";
-   document.querySelector('.postForm').style.display = "block";
-   fetch("http://thesi.generalassemb.ly:8080/user/post", {
-       headers: {
-           "Authorization": "Bearer " + localStorage.getItem('user')
-       }
-   })
-   .then((res) => {
-       return res.json();
-   })
-   .then((res) => {
-       const list = document.querySelector('.posts');
-       for (let i = 0; i < res.length; i++) {
-           const item = document.createElement('li');
-           const title = document.createElement('h3');
-           const description = document.createElement('p');
-           item.appendChild(title);
-           item.appendChild(description);
-           title.innerText = res[i].title;
-           description.innerText = res[i].description;
-           list.appendChild(item);
-       }
-   })
-   .catch((err) => {
-       console.log(err);
-   })
-}
+  function updateDom() {
+     document.querySelector('.signupForm').style.display = "none";
+     document.querySelector('.postForm').style.display = "block";
+     fetch("http://thesi.generalassemb.ly:8080/user/post", {
+         headers: {
+             "Authorization": "Bearer " + localStorage.getItem('user')
+         }
+     })
+     .then((res) => {
+         return res.json();
+     })
+     .then((res) => {
+         const list = document.querySelector('.posts');
+         for (let i = 0; i < res.length; i++) {
+             const item = document.createElement('li');
+             const title = document.createElement('h3');
+             const description = document.createElement('p');
+             item.appendChild(title);
+             item.appendChild(description);
+             title.innerText = res[i].title;
+             description.innerText = res[i].description;
+             list.appendChild(item);
+         }
+     })
+     .catch((err) => {
+         console.log(err);
+     })
+  }
 function createPost(event) {
    event.preventDefault();
    const title = document.querySelector('.title');
@@ -79,8 +83,9 @@ function createPost(event) {
    })
    .catch((err) => {
        console.log(err);
-   })
+  })
 }
+
 function createLogin(event) {
    event.preventDefault();
    const email = document.querySelector('.email');
@@ -97,8 +102,13 @@ function createLogin(event) {
    })
    .then((res) => {
        return res.json();
-       console(log);
    })
+
+   .then((res) => {
+       const loginForm=document.querySelector(".loginForm");
+       loginForm.style.display="none";
+})
+
    .catch((err) => {
        console.log(err);
      })
