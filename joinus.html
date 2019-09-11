@@ -6,12 +6,12 @@
     <title>Sign up</title>
   </head>
 
-  <nav>
-    <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="profile.html">Your Profile</a></li>
-      <li><a href="login.html">Logout</a></li>
+  <nav class="navbar">
+    <ul class="navlinks">
+      <li class="navitem"><a href="home.html">Home</a></li>
+      <li class="navitem"><a href="about.html">About</a></li>
+      <li class="navitem"><a href="profile.html">Your Profile</a></li>
+      <li class="navitem"><a href="login.html">Logout</a></li>
     </ul>
   </nav>
 
@@ -19,7 +19,7 @@
 <h1>Sign up below!</h1>
 <!-- Sign up form -->
       <div class="sign-up-form">
-          <form onSubmit="signUp(event)" class="signupForm">
+          <form onSubmit="postData(event)" class="signupForm">
               <input type="text" class="email" placeholder="email"/>
               <input type="password" class="password" placeholder="password"/>
               <input type="text" class="username" placeholder="username"/>
