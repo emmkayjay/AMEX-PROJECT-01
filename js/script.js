@@ -26,6 +26,7 @@ function signUp(event) {
    .catch((err) => {
        console.log(err);
    })
+   .then(window.location.href = "home.html");
 }
 // document.getElementById('signupForm').addEventListener(onclick, alertUser("Thank you and welcome to theVyne!"))
 
