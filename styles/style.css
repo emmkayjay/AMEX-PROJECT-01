@@ -1,39 +1,166 @@
-main, header, section, aside, footer {
-    margin: 0;
-    padding: rem-calc(20);
-    border: 1px solid #000000;
-    color: #ffffff;
+body {
+  font-family: 'Gayathri', sans-serif;
+​
 }
-.main {
-    background: red;
+.header-container {
+  background: url('wallvines.png');
 }
-.header {
-    background: #03a9f4;
+header {
+  font-family: 'Eczar',sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
-.sub-heading {
-    background: #d22b1f;
+header h1 {
+  font-size: 75px;
+  line-height: 80px;
+  margin: 0;
+  padding: 5px;
 }
+​
+header h2 {
+  font-size: 40px;
+  margin: 0;
+  padding: 5px;
+}
+.login-body {
+  background: url('wallvines.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+​
+.login-header {
+  color: #dffd9d;
+  font-weight: bold;
+  text-align: center;
+  font-size: 200px;
+  line-height: 100px;
+  font-family: 'Eczar',sans-serif;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+​
+.email {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.password {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.login-button {
+height: 40px;
+width: 160px;
+color: green;
+display: inline;
+font-weight: bold;
+margin: 3px;
+text-transform: uppercase;
+}
+.login-redirect {
+  display: block;
+  font-size: 38px;
+  font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+​
+.username {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.signup-button {
+height: 40px;
+width: 160px;
+color: green;
+display: inline;
+font-weight: bold;
+margin: 3px;
+text-transform: uppercase;
+}
+.sign-up-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+​
 .content {
-    background: #129a22;
-    flex: 1
+​
 }
-.sidebar {
-    border: 1px solid #000000;
-    background: #673ab7;
+​
+li {
+  list-style: disc;
+}
+​
+.title{
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.description{
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.post-button{
+  height: 40px;
+  width: 160px;
+  color: green;
+  display: inline;
+  font-weight: bold;
+  margin: 3px;
+  text-transform: uppercase;
 }
 .footer {
-    border: 1px solid #000000;
-    background: #616161;
-}
-.flex-container {
-    @media screen and (min-width: 640px){
-        display: flex;
-    }
-.content {
-        flex: 1;
-        ...
-  }
-.sidebar {
-        flex: 0 1 300px;
-        ...
+    border: 1px solid green;
+    font-size: 14px;
+    font-weight: bold;
+    background: lightgreen;
+    text-align: center;
+    text-transform: uppercase;
 }

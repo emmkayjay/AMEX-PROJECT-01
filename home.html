@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Eczar|Gayathri&display=swap" rel="stylesheet">
+  <title>the Vyne: About</title>
+</head>
+
+  <!-- <nav class="navbar">
+    <ul class="navlinks">
+      <li class="navitem"><a href="home.html">Home</a></li>
+      <li class="navitem"><a href="about.html">About</a></li>
+      <li class="navitem"><a href="profile.html">Your Profile</a></li>
+      <li class="navitem"><a href="login.html">Logout</a></li>
+    </ul>
+  </nav> -->
+
+  <body>
+
+    <!-- header -->
+    <div class="header-container">
+            <header>
+                <h1>the Vyne</h1>
+                <h2>we'll grow on you</h2>
+            </header>
+    </div>
+
+<!-- Content -->
+<div class="wrapper">
+    <div class="content">
+        <h2>What's New:</h2>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda</li>
+            <li>Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego</li>
+          </ul>
+
+          <ul class="posts"></ul>
+    </div>
+
+<!-- Create post form -->
+  <div class="create-new-post">
+      <form onSubmit = "createPost(event)" class="postForm">
+          <input type="text" class="title" placeholder="title"/>
+          <input type="text" class="description" placeholder="description"/>
+          <input type="submit" value="Create new post" class="post-button" />
+          <button type="button" name="delete post"></button>
+      </form>
+  </div>
+  <div class="create-profile">
+<form onSubmit="createProfile(event)" class="profileForm">
+    <input type="text" class="addemail" placeholder="addemail"/>
+    <input type="mobile" class="mobile" placeholder="cellphone"/>
+    <input type="text" class="address" placeholder="address"/>
+    <input type="submit" value="Create"/>
+</form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p> © Ash & Mel 2019</p>
+</footer>
+
+      <script src="./js/script.js"></script>
+  </body>
+</html>

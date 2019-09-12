@@ -26,10 +26,9 @@ function postData(event) {
         localStorage.setItem('user', res.token);
           if(res.httpStatus !== 'BAD_REQUEST') {
             window.location.href = "content-page.html";
-            } else {
+            }else{
               localStorage.clear();
             }
-})
 
      .catch((err) => {
          console.log(err);
@@ -83,12 +82,10 @@ function createPost(event) {
            description: description.value
        })
    })
-
    .then((res) => {
        console.log(res);
        updateDom(res);
    })
-
    .catch((err) => {
        console.log(err);
   })
@@ -108,7 +105,6 @@ function createLogin(event) {
                password: password.value
            })
    })
-
    .then((res) => {
        return res.json();
    })
@@ -123,34 +119,34 @@ function createLogin(event) {
      })
   }
 
+  function createProfile(event) {
+     event.preventDefault();
+     const addemail = document.querySelector('.addemail');
+     const mobile = document.querySelector('.mobile');
+     const address= document.querySelector('.address');
+      fetch('http://thesi.generalassemb.ly:8080/profile', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 addemail: addemail.value,
+                 mobile: mobile.value,
+                 address: address.value
+             })
+     })
 
-     function createProfile(event) {
-        event.preventDefault();
-        const addemail = document.querySelector('.addemail');
-        const mobile = document.querySelector('.mobile');
-        const address= document.querySelector('.address');
-         fetch('http://thesi.generalassemb.ly:8080/profile', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    addemail: addemail.value,
-                    mobile: mobile.value,
-                    address: address.value
-                })
-        })
+  .then((res) => {
+         return res.json();
+         console.log(res);
+     })
 
-     .then((res) => {
-            return res.json();
-            console.log(res);
-        })
+  .then((res) => {
+  	localStorage.setItem('user', res.token);
+         console.log(res)
+     })
 
-     .then((res) => {
-
-        })
-
-        .catch((err) => {
-            console.log(err);
-        })
-     }
+     .catch((err) => {
+         console.log(err);
+     })
+  }
