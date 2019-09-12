@@ -18,7 +18,7 @@
   </nav> -->
 
   <body>
-
+    <body onload="window.alert('Welcome to the Vyne!');">
     <!-- header -->
     <div class="header-container">
             <header>
@@ -31,12 +31,15 @@
 <div class="wrapper">
     <div class="content">
         <h2>What's New:</h2>
-          <ul>
+          <!-- <ul>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda</li>
             <li>Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego</li>
-          </ul>
+          </ul> -->
 
-          <ul class="posts"></ul>
+          <ul id="wall"
+          <form onSubmit = "createLogin(event)" class="listPosts">
+          </form>
+          </ul>
     </div>
 
 <!-- Create post form -->
@@ -56,12 +59,14 @@
     <input type="submit" value="Create"/>
 </form>
 </div>
+<ul class="posts">
+</ul>
 
 <!-- Footer -->
 <footer class="footer">
     <p> © Ash & Mel 2019</p>
 </footer>
 
-      <script src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
   </body>
 </html>
