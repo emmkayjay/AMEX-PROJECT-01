@@ -21,7 +21,7 @@
           <input type="submit" value="Login" class="login-button"/>
         </form>
 
-      <p class="login-redirect">New here? Sign up below! </p>
+      <p class="login-redirect">New here? <span id="signUpLink" onclick="openNav()">Click</span> to sign up!</p>
     </div>
     <div class="sign-up-form">
       <form onSubmit="postData(event)" class="signupForm">
@@ -39,15 +39,20 @@
 </html>
   </div>
 
-    <!-- Sign up form -->
-      <div class="sign-up-form">
-        <form onSubmit="postData(event)" class="signupForm">
-            <input type="text" class="email" placeholder="email"/>
-            <input type="password" class="password" placeholder="password"/>
-            <input type="text" class="username" placeholder="username"/>
-            <input class="signup-button" type="submit" value="Sign up!"/>
-        </form>
-      </div>
+<!-- SIDEBAR POP OUT FOR SIGN UP -->
+  <div id="signUpPopOut" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Sign up form -->
+    <div class="sign-up-form">
+      <form onSubmit="postData(event)" class="signupForm">
+          <input type="text" class="email" placeholder="email"/>
+          <input type="password" class="password" placeholder="password"/>
+          <input type="text" class="username" placeholder="username"/>
+          <input class="signup-button" type="submit" value="Sign up!"/>
+      </form>
+    </div>
+</div>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
