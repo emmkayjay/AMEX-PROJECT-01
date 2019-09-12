@@ -44,9 +44,11 @@ function postData(event) {
              "Authorization": "Bearer " + localStorage.getItem('user')
          }
      })
+
      .then((res) => {
          return res.json();
      })
+
      .then((res) => {
          const list = document.querySelector('.posts');
          for (let i = 0; i < res.length; i++) {
@@ -60,6 +62,7 @@ function postData(event) {
              list.appendChild(item);
          }
      })
+
      .catch((err) => {
          console.log(err);
      })
