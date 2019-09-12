@@ -37,6 +37,13 @@ header h2 {
   margin: 0;
   padding: 5px;
 }
+.home-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.home-forms{
+  background: lightgreen;
+}
 .login-body {
   background: url('wallvines.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -112,6 +119,36 @@ text-transform: uppercase;
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
+}
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgreen;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  align-items: center;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#signUpLink {
+  color: yellow
+}
+
+#signUpLink:hover {
+  color: hotpink;
+  text-decoration: underline;
 }
 
 .username {

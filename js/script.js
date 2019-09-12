@@ -96,10 +96,6 @@ function createProfile(event) {
             }
         }
 
-
-
-
-
         //localStorage.setItem('name', res.username);
             //if (res.username) {
             //document.querySelector('.signupForm').style.display = "none";
@@ -111,11 +107,10 @@ function createProfile(event) {
          //createPost();
      // })
 
-
-     .catch((err) => {
-         console.log(err);
-     })
-  }
+  //    .catch((err) => {
+  //        console.log(err);
+  //    })
+  // }
 
 
 function updateDom(data) {
@@ -256,4 +251,14 @@ function createLogin(event) {
    .catch((err) => {
        console.log(err);
      })
+  }
+
+
+
+  function openNav() {
+    document.getElementById("signUpPopOut").style.width = "280px";
+  }
+
+  function closeNav() {
+    document.getElementById("signUpPopOut").style.width = "0";
   }
