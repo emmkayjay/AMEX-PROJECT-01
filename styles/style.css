@@ -1,9 +1,19 @@
 body {
   font-family: 'Gayathri', sans-serif;
-​
+}
+
+.home-body {
+  background: url('bricks.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .header-container {
   background: url('wallvines.png');
+}
+.header-container:hover {
+  opacity: 0.7;
 }
 header {
   font-family: 'Eczar',sans-serif;
@@ -21,11 +31,18 @@ header h1 {
   margin: 0;
   padding: 5px;
 }
-​
+
 header h2 {
   font-size: 40px;
   margin: 0;
   padding: 5px;
+}
+.home-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.home-forms{
+  background: lightgreen;
 }
 .login-body {
   background: url('wallvines.png') no-repeat center center fixed;
@@ -34,7 +51,7 @@ header h2 {
   -o-background-size: cover;
   background-size: cover;
 }
-​
+
 .login-header {
   color: #dffd9d;
   font-weight: bold;
@@ -55,7 +72,7 @@ header h2 {
   flex-direction: column;
   margin-bottom: 10px;
 }
-​
+
 .email {
   height:40px;
   width:160px;
@@ -78,10 +95,17 @@ header h2 {
 height: 40px;
 width: 160px;
 color: green;
+background-color: lightgray;
 display: inline;
 font-weight: bold;
 margin: 3px;
 text-transform: uppercase;
+}
+.login-button:hover {
+  background-color: yellow;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
 }
 .login-redirect {
   display: block;
@@ -96,7 +120,39 @@ text-transform: uppercase;
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
-​
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgreen;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#signUpLink {
+  color: yellow
+}
+
+#signUpLink:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
 .username {
   height:40px;
   width:160px;
@@ -110,25 +166,76 @@ text-transform: uppercase;
 height: 40px;
 width: 160px;
 color: green;
+background-color: lightgray;
 display: inline;
 font-weight: bold;
 margin: 3px;
 text-transform: uppercase;
+}
+.signup-button:hover {
+  background-color: yellow;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
 }
 .sign-up-form {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-​
-.content {
-​
+
+.addemail {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
 }
-​
+.mobile {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.address {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.create-profile-button {
+  height: 40px;
+  width: 160px;
+  color: green;
+  background-color: lightgray;
+  display: inline;
+  font-weight: bold;
+  margin: 3px;
+  text-transform: uppercase;
+}
+.create-profile-button:hover {
+  background-color: yellow;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.content {
+
+}
+
 li {
   list-style: disc;
 }
-​
+
 .title{
   height:40px;
   width:160px;
@@ -151,16 +258,24 @@ li {
   height: 40px;
   width: 160px;
   color: green;
+  background-color: lightgray;
   display: inline;
   font-weight: bold;
   margin: 3px;
   text-transform: uppercase;
 }
+.post-button:hover {
+  background-color: yellow;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .footer {
-    border: 1px solid green;
+    border: 2px solid green;
     font-size: 14px;
     font-weight: bold;
-    background: lightgreen;
+    background: lightgray;
     text-align: center;
     text-transform: uppercase;
 }

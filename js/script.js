@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
 function listPosts() {
     document.querySelector("#wall");
     fetch('http://thesi.generalassemb.ly:8080/post/list', {
@@ -11,7 +15,10 @@ function listPosts() {
         console.log(res);
         return res.json();
     })
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
     .then((res) => {
         const list = document.querySelector('.posts');
         for (let i = 0; i < res.length; i++) {
@@ -25,13 +32,21 @@ function listPosts() {
             list.appendChild(item);
         }
     })
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
     .catch((err) => {
         console.log(err);
     })
 }
 listPosts();
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
+>>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
 function postData(event) {
      event.preventDefault();
      const email = document.querySelector('.email');
@@ -53,23 +68,38 @@ function postData(event) {
          return res.json();
          console.log(res);
      })
-
      .then((res) => {
         localStorage.setItem('user', res.token);
         console.log(res);
         localStorage.setItem('user', res.token);
           if(res.httpStatus !== 'BAD_REQUEST') {
+<<<<<<< HEAD
+            window.location.href = "home.html";
+            } else {
+=======
+<<<<<<< HEAD
             window.location.href = "home.html";
             } else {
               localStorage.clear();
             }
 })
+=======
+            window.location.href = "content-page.html";
+            }else{
+>>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
+              localStorage.clear();
+            }
+})
 
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
      .catch((err) => {
          console.log(err);
      })
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
   function updateDom() {
      document.querySelector('.signupForm').style.display = "none";
      document.querySelector('.postForm').style.display = "block";
@@ -101,7 +131,6 @@ function postData(event) {
          console.log(err);
      })
   }
-
 function createPost(event) {
    event.preventDefault();
    const title = document.querySelector('.title');
@@ -125,7 +154,10 @@ function createPost(event) {
        console.log(err);
   })
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
 function createLogin(event) {
    event.preventDefault();
    const email = document.querySelector('.email');
@@ -143,7 +175,10 @@ function createLogin(event) {
    .then((res) => {
        return res.json();
    })
+<<<<<<< HEAD
+=======
 
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
    .then((res) => {
        const loginForm=document.querySelector(".loginForm");
        loginForm.style.display="none";
@@ -153,8 +188,14 @@ function createLogin(event) {
        console.log(err);
      })
   }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
+>>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
   function createProfile(event) {
      event.preventDefault();
      const addemail = document.querySelector('.addemail');
@@ -171,18 +212,41 @@ function createLogin(event) {
                  address: address.value
              })
      })
+<<<<<<< HEAD
+=======
 
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
   .then((res) => {
          return res.json();
          console.log(res);
      })
+<<<<<<< HEAD
+  .then((res) => {
+    localStorage.setItem('user', res.token);
+         console.log(res)
+     })
+=======
 
   .then((res) => {
   	localStorage.setItem('user', res.token);
          console.log(res)
      })
 
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
      .catch((err) => {
          console.log(err);
      })
   }
+<<<<<<< HEAD
+
+
+// CONTROLS FOR SIGNUP FORM BAR, DO NOT TOUCH
+  function openNav() {
+    document.getElementById("signUpPopOut").style.width = "280px";
+  }
+
+  function closeNav() {
+    document.getElementById("signUpPopOut").style.width = "0";
+  }
+=======
+>>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
