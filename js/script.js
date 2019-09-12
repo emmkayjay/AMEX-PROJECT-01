@@ -109,7 +109,7 @@ function createProfile(event) {
            //userName=test.userName;
            //manipulateDom(`${userName}`)
          //createPost();
-     })
+     // })
 
 
      .catch((err) => {

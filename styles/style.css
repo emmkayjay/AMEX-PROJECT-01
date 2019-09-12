@@ -2,20 +2,45 @@ body {
   font-family: 'Gayathri', sans-serif;
 
 }
+.header-container {
+  background: url('wallvines.png');
+}
+header {
+  font-family: 'Eczar',sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+header h1 {
+  font-size: 75px;
+  line-height: 80px;
+  margin: 0;
+  padding: 5px;
+}
 
-.login-container {
-background-image: url('wallvines.png');
-background-repeat: repeat;
-background-size: cover;
-height: 150vh;
-width: 100%;
+header h2 {
+  font-size: 40px;
+  margin: 0;
+  padding: 5px;
+}
+.login-body {
+  background: url('wallvines.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .login-header {
-  color: white;
+  color: #dffd9d;
   font-weight: bold;
   text-align: center;
   font-size: 200px;
+  line-height: 100px;
   font-family: 'Eczar',sans-serif;
   text-shadow:
 		-1px -1px 0 #000,
@@ -28,6 +53,7 @@ width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .email {
@@ -70,46 +96,71 @@ text-transform: uppercase;
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
-.login-redirect a {
-  color: pink;
-  text-decoration: none;
-}
-.navbar {
-  width: 1200px;
-  display: flex;
-  align-self: center;
-}
 
-.navlinks {
-  display: flex;
-  list-style: none;
-  width: 1200px;
-  align-items: center;
-
-}
-.navitem {
-  display: inline-block;
-  justify-content: space-around;
-  padding: 0px 80px 0px 100px;
-  font-family: 'Eczar',sans-serif;
-  /* text-transform: uppercase; */
-  text-decoration: none;
-  color: #333;
+.username {
+  height:40px;
+  width:160px;
+  border:2px solid green;
   font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.signup-button {
+height: 40px;
+width: 160px;
+color: green;
+display: inline;
+font-weight: bold;
+margin: 3px;
+text-transform: uppercase;
+}
+.sign-up-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header {
-    background: #03a9f4;
-}
-.sub-heading {
-    background: #d22b1f;
-}
 .content {
-    background: #129a22;
-    flex: 1
+
 }
+
+li {
+  list-style: disc;
+}
+
+.title{
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.description{
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.post-button{
+  height: 40px;
+  width: 160px;
+  color: green;
+  display: inline;
+  font-weight: bold;
+  margin: 3px;
+  text-transform: uppercase;
 }
 .footer {
-    border: 1px solid #000000;
-    background: #616161;
+    border: 1px solid green;
+    font-size: 14px;
+    font-weight: bold;
+    background: lightgreen;
+    text-align: center;
+    text-transform: uppercase;
 }
