@@ -1,10 +1,79 @@
-main, header, section, aside, footer {
-    margin: 0;
-    padding: rem-calc(20);
-    border: 1px solid #000000;
-    color: #ffffff;
+body {
+  font-family: 'Gayathri', sans-serif;
+
 }
 
+.login-container {
+background-image: url('wallvines.png');
+background-repeat: repeat;
+background-size: cover;
+height: 150vh;
+width: 100%;
+}
+
+.login-header {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 200px;
+  font-family: 'Eczar',sans-serif;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.email {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.password {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.login-button {
+height: 40px;
+width: 160px;
+color: green;
+display: inline;
+font-weight: bold;
+margin: 3px;
+text-transform: uppercase;
+}
+.login-redirect {
+  display: block;
+  font-size: 38px;
+  font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.login-redirect a {
+  color: pink;
+  text-decoration: none;
+}
 .navbar {
   width: 1200px;
   display: flex;
@@ -22,15 +91,13 @@ main, header, section, aside, footer {
   display: inline-block;
   justify-content: space-around;
   padding: 0px 80px 0px 100px;
-  font-family: 'Raleway',sans-serif;
+  font-family: 'Eczar',sans-serif;
   /* text-transform: uppercase; */
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
-.main {
-    background: red;
-}
+
 .header {
     background: #03a9f4;
 }
@@ -41,23 +108,8 @@ main, header, section, aside, footer {
     background: #129a22;
     flex: 1
 }
-.sidebar {
-    border: 1px solid #000000;
-    background: #673ab7;
 }
 .footer {
     border: 1px solid #000000;
     background: #616161;
-}
-.flex-container {
-    @media screen and (min-width: 640px){
-        display: flex;
-    }
-.content {
-        flex: 1;
-        ...
-  }
-.sidebar {
-        flex: 0 1 300px;
-        ...
 }
