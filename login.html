@@ -6,16 +6,25 @@
     <title>the Vyne</title>
   </head>
 
-  <nav>
-    <ul>
-      <li><a href="./pages/home.html">Home</a></li>
-      <li><a href="./pages/about.html">About</a></li>
-      <li><a href="./pages/profile.html">Your Profile</a></li>
-      <li><a href="./pages/login.html">Logout</a></li>
+  <nav class="navbar">
+    <ul class="navlinks">
+      <li class="navitem"><a href="home.html">Home</a></li>
+      <li class="navitem"><a href="about.html">About</a></li>
+      <li class="navitem"><a href="profile.html">Your Profile</a></li>
+      <li class="navitem"><a href="login.html">Logout</a></li>
     </ul>
   </nav>
 
   <body>
 
+    <!-- Login form -->
+          <div class="login-form">
+              <form onSubmit = "createLogin(event)" class="loginForm">
+                  <input type="text" class="email" placeholder="email"/>
+                  <input type="password" class="password" placeholder="password"/>
+                  <input type="submit" value="Login"/>
+              </form>
+        <p>New here? <a href="joinus.html">Sign up!</a> </p>
+          </div>
   </body>
 </html>

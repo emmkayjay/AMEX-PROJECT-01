@@ -7,14 +7,14 @@
         <title>the Vyne</title>
     </head>
 
-<nav>
-  <ul>
-    <li><a href="./pages/home.html">Home</a></li>
-    <li><a href="./pages/about.html">About</a></li>
-    <li><a href="./pages/profile.html">Your Profile</a></li>
-    <li><a href="./pages/login.html">Logout</a></li>
-  </ul>
-</nav>
+    <nav class="navbar">
+      <ul class="navlinks">
+        <li class="navitem"><a href="home.html">Home</a></li>
+        <li class="navitem"><a href="about.html">About</a></li>
+        <li class="navitem"><a href="profile.html">Your Profile</a></li>
+        <li class="navitem"><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
 
     <body>
 <!-- header -->
@@ -26,43 +26,25 @@
             <p>let it grow on you.</p>
         </section>
 
+        <!-- Login form -->
+              <div class="login-form">
+                  <form onSubmit = "createLogin(event)" class="loginForm">
+                      <input type="text" class="email" placeholder="email"/>
+                      <input type="password" class="password" placeholder="password"/>
+                      <input type="submit" value="Login"/>
+                  </form>
+              </div>
 <!-- main content -->
     <div class="wrapper">
 
-<!-- Content -->
-    <div class="content">
-          <h2>What's New</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda.
-            </p>
-            <p>
-              Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego.
-            </p>
-            <ul class="posts">
-            </ul>
-    </div>
 
 
     <div class="sidebar-forms">
 
-<!-- Sign up form -->
-      <div class="sign-up-form">
-          <form onSubmit="signUp(event)" class="signupForm">
-              <input type="text" class="email" placeholder="email"/>
-              <input type="password" class="password" placeholder="password"/>
-              <input type="text" class="username" placeholder="username"/>
-              <input type="submit" value="Sign up!"/>
-          </form>
-        </div>
-<!-- Login form -->
-      <div class="login-form">
-          <form onSubmit = "createLogin(event)" class="loginForm">
-              <input type="text" class="email" placeholder="email"/>
-              <input type="password" class="password" placeholder="password"/>
-              <input type="submit" value="Login"/>
-          </form>
-      </div>
+
+
 <!-- Create post form -->
+
       <div class="create-new-post">
           <form onSubmit = "createPost(event)" class="postForm">
               <input type="text" class="title" placeholder="title"/>

@@ -1,33 +1,34 @@
-
-function signUp(event) {
-   event.preventDefault();
-   const email = document.querySelector('.email');
-   const password = document.querySelector('.password');
-   const username = document.querySelector('.username');
-   fetch('http://thesi.generalassemb.ly:8080/signup', {
-           method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               email: email.value,
-               password: password.value,
-               username: username.value
-           })
-   })
-   .then((res) => {
-       return res.json();
-       console.log(res);
-   })
-
-   .then((res) => {
-       localStorage.setItem('user', res.token);
-       console.log(res)
-   })
-   .catch((err) => {
-       console.log(err);
-   })
-}
+//
+// function signUp(event) {
+//    event.preventDefault();
+//    const email = document.querySelector('.email');
+//    const password = document.querySelector('.password');
+//    const username = document.querySelector('.username');
+//    fetch('http://thesi.generalassemb.ly:8080/signup', {
+//            method: 'POST',
+//            headers: {
+//                'Content-Type': 'application/json'
+//            },
+//            body: JSON.stringify({
+//                email: email.value,
+//                password: password.value,
+//                username: username.value
+//            })
+//    })
+//    .then((res) => {
+//        return res.json();
+//        console.log(res);
+//    })
+//
+//    .then((res) => {
+//        localStorage.setItem('user', res.token);
+//        console.log(res)
+//    })
+//    .catch((err) => {
+//        console.log(err);
+//    })
+//    .then(window.location.href = "home.html");
+// }
 // document.getElementById('signupForm').addEventListener(onclick, alertUser("Thank you and welcome to theVyne!"))
 
 
@@ -56,6 +57,7 @@ function createProfile(event) {
        console.log(res)
 
    })
+ }
 
     function postData(event) {
      event.preventDefault();
@@ -82,11 +84,17 @@ function createProfile(event) {
         localStorage.setItem('user', res.token);
         console.log(res);
         localStorage.setItem('user', res.token);
+      })
+       .then(window.location.href = "home.html");
+
+
           if(res.httpStatus !== 'BAD_REQUEST') {
-            window.location.href = "content-page.html";
+            window.location.href = "home.html";
+
             }else{
               localStorage.clear();
             }
+        }
 
 
 
@@ -237,18 +245,14 @@ function createLogin(event) {
    .then((res) => {
        return res.json();
    })
-
-   .then((res) => {
-       window.alert("Welcome back, " + user.value)
-   })
-
-
+   // .then((res) => {
+   //     window.alert("Welcome back, " + user.value)
+   // })
+   //
    .then((res) => {
        const loginForm=document.querySelector(".loginForm");
        loginForm.style.display="none";
 })
-
-
    .catch((err) => {
        console.log(err);
      })
