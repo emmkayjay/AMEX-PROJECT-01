@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="./styles/style.css">
   <link href="https://fonts.googleapis.com/css?family=Eczar|Gayathri&display=swap" rel="stylesheet">
-  <title>the Vyne: About</title>
+  <title>the Vyne</title>
 </head>
 
   <!-- <nav class="navbar">
@@ -17,7 +17,7 @@
     </ul>
   </nav> -->
 
-  <body>
+  <body class="home-body">
 
     <!-- header -->
     <div class="header-container">
@@ -38,6 +38,17 @@
 
           <ul class="posts"></ul>
     </div>
+
+<div class="create-profile">
+  <form onSubmit="createProfile(event)" class="profileForm">
+      <input type="text" class="addemail" placeholder="Additional Email"/>
+      <input type="mobile" class="mobile" placeholder="Mobile Number"/>
+      <input type="text" class="address" placeholder="Address"/>
+      <input type="submit" value="Create Profile" class="create-profile-button"/>
+    </form>
+</div>
+        <ul class="posts">
+        </ul>
 
 <!-- Create post form -->
   <div class="create-new-post">
