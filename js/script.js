@@ -1,3 +1,4 @@
+
 function signUp(event) {
      event.preventDefault();
      const email = document.querySelector('.signup-email');
@@ -63,6 +64,7 @@ function createLogin(event) {
   }
 
 
+
 function listPosts() {
     document.querySelector("#wall");
     fetch('http://thesi.generalassemb.ly:8080/post/list', {
@@ -75,6 +77,7 @@ function listPosts() {
         console.log(res);
         return res.json();
     })
+
     .then((res) => {
         const list = document.querySelector('.posts');
         for (let i = 0; i < res.length; i++) {
@@ -88,11 +91,58 @@ function listPosts() {
             list.appendChild(item);
         }
     })
+
+
+
     .catch((err) => {
         console.log(err);
     })
 }
 listPosts();
+
+function postData(event) {
+     event.preventDefault();
+     const email = document.querySelector('.email');
+     const password = document.querySelector('.password');
+     const username = document.querySelector('.username');
+     fetch('http://thesi.generalassemb.ly:8080/signup', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 email: email.value,
+                 password: password.value,
+                 username: username.value
+             })
+     })
+
+     .then((res) => {
+         return res.json();
+         console.log(res);
+     })
+     .then((res) => {
+        localStorage.setItem('user', res.token);
+        console.log(res);
+        localStorage.setItem('user', res.token);
+          if(res.httpStatus !== 'BAD_REQUEST') {
+
+            window.location.href = "home.html";
+
+
+            window.location.href = "home.html";
+            } else {
+              localStorage.clear();
+            }
+})
+
+            window.location.href = "content-page.html";
+            }else{
+
+              localStorage.clear();
+            }
+})
+
 
 
   function updateDom(data) {
@@ -158,6 +208,7 @@ for (let i = 0; i < res.length; i++);
        console.log(err);
   })
 }
+
 
   function createProfile(event) {
      event.preventDefault();
