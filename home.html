@@ -2,47 +2,38 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="./styles/style.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+ <link rel="stylesheet" href="styles/style.css">
   <link href="https://fonts.googleapis.com/css?family=Eczar|Gayathri&display=swap" rel="stylesheet">
-  <title>the Vyne</title>
+ <title>the Vyne</title>
 </head>
 
-  <!-- <nav class="navbar">
-    <ul class="navlinks">
-      <li class="navitem"><a href="home.html">Home</a></li>
-      <li class="navitem"><a href="about.html">About</a></li>
-      <li class="navitem"><a href="profile.html">Your Profile</a></li>
-      <li class="navitem"><a href="login.html">Logout</a></li>
-    </ul>
-  </nav> -->
+ <body class="home-body" onload="window.alert('Welcome to the Vyne');">
 
-<<<<<<< HEAD
-  <body>
-    <body onload="window.alert('Welcome to the Vyne!');">
-=======
-  <body class="home-body" onload="window.alert('Welcome to the Vyne!');">
->>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
-    <!-- header -->
-    <div class="header-container">
-            <header>
-                <h1>the Vyne</h1>
-                <h2>we'll grow on you</h2>
-            </header>
-    </div>
+
+   <!-- header -->
+   <div class="header-container">
+           <header>
+               <h1>the Vyne</h1>
+               <h3>it'll grow on you</h3>
+           </header>
+   </div>
 
 <!-- Content -->
 <div class="home-wrapper">
-    <div class="content">
-<<<<<<< HEAD
-        <h2>What's New:</h2>
-=======
-        <h2>What's Growing Up The Wall:</h2>
->>>>>>> 17829ca42c9729f10e8bb88d8e27c8fe12df8ee1
-          <!-- <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda</li>
-            <li>Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego</li>
-          </ul> -->
+   <div class="content">
+       <h2>The Writings on The Wall:</h2>
+
+         <ul id="wall" class="posts">
+         <form class="listPosts" onSubmit = "createLogin(event)">
+         </form>
+         </ul>
+   </div>
+
+
+  <body class="home-body" onload="window.alert('Welcome to the Vyne!');">
+
+
 
           <ul id="wall"
           <form onSubmit = "createLogin(event)" class="listPosts">
@@ -50,49 +41,45 @@
           </ul>
     </div>
 
+
 <div class="home-forms">
-<!-- create profile form -->
-<div class="create-profile">
-  <form onSubmit="createProfile(event)" class="profileForm">
-      <input type="text" class="addemail" placeholder="Additional Email"/>
-      <input type="mobile" class="mobile" placeholder="Mobile Number"/>
-      <input type="text" class="address" placeholder="Address"/>
-      <input type="submit" value="Create Profile" class="create-profile-button"/>
-    </form>
-</div>
-        <ul class="posts">
-        </ul>
 
 <!-- Create post form -->
-  <div class="create-new-post">
-      <form onSubmit = "createPost(event)" class="postForm">
-          <input type="text" class="title" placeholder="title"/>
-          <input type="text" class="description" placeholder="description"/>
-          <input type="submit" value="Create new post" class="post-button" />
-          <button type="button" name="delete post"></button>
-      </form>
-  </div>
-<<<<<<< HEAD
-</div>
-</div>
-=======
-  <div class="create-profile">
-<form onSubmit="createProfile(event)" class="profileForm">
-    <input type="text" class="addemail" placeholder="addemail"/>
-    <input type="mobile" class="mobile" placeholder="cellphone"/>
-    <input type="text" class="address" placeholder="address"/>
-    <input type="submit" value="Create"/>
+ <div class="create-new-post">
+     <form onSubmit = "createPost(event)" class="postForm">
+         <input type="text" class="title" placeholder="title"/>
+         <br>
+         <input type="text" class="description" placeholder="description"/>
+         <br>
+         <input type="submit" value="Create new post" class="post-button" />
+         <br>
+         <!-- <input type="submit" class="delete-post-button" value="delete post"> -->
+     </form>
+ </div>
+
+<div class="create-profile">
+  <form onSubmit="createProfile(event)" class="profileForm">
+    <input type="text" class="addemail" placeholder="Additional Email"/>
+    <br>
+    <input type="mobile" class="mobile" placeholder="Mobile Phone"/>
+    <br>
+    <input type="text" class="address" placeholder="Address"/>
+    <br>
+    <input type="submit" class="create-profile-button" value="Create Profile"/>
 </form>
+  </div>
 </div>
 <ul class="posts">
 </ul>
 
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
+</div>
 <!-- Footer -->
 <footer class="footer">
-    <p> © Ash & Mel 2019</p>
+   <p> © Ash & Mel 2019</p>
 </footer>
+
 
   <script src="./js/script.js"></script>
   </body>
+
 </html>

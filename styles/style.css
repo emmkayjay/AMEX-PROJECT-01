@@ -9,43 +9,76 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
 .header-container {
   background: url('wallvines.png');
 }
+
 .header-container:hover {
   opacity: 0.7;
 }
+
 header {
-  font-family: 'Eczar',sans-serif;
-  color: white;
-  font-weight: bold;
-  text-shadow:
+font-family: 'Eczar',sans-serif;
+color: white;
+font-weight: bold;
+text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
 header h1 {
   font-size: 75px;
   line-height: 80px;
   margin: 0;
-  padding: 5px;
+  /* padding: 5px; */
 }
 
-header h2 {
-  font-size: 40px;
+header h3 {
+  font-size: 30px;
   margin: 0;
-  padding: 5px;
+  /* padding: 5px; */
 }
+
 .home-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* align-items: center; */
 }
+
 .home-forms{
-  background: lightgreen;
+  background: #d0ffc6;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* flex-direction: column; */
+  flex: 1;
+  margin: 10px;
+  width: 150px;
 }
+.content {
+background: rgba(229,255,223,0.6);
+flex: 2;
+margin: 10px;
+width: 700px;
+}
+.create-new-post {
+  position: fixed;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.create-profile {
+  position: fixed;
+  margin-right: 0;
+  margin-top: 220px;
+}
+
 .login-body {
-  background: url('wallvines.png') no-repeat center center fixed;
+  background: url('wallvinesopacity.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,7 +86,7 @@ header h2 {
 }
 
 .login-header {
-  color: #dffd9d;
+  color: #119813;
   font-weight: bold;
   text-align: center;
   font-size: 200px;
@@ -73,7 +106,7 @@ header h2 {
   margin-bottom: 10px;
 }
 
-.email {
+.login-email {
   height:40px;
   width:160px;
   border:2px solid green;
@@ -82,7 +115,7 @@ header h2 {
   text-align: center;
   text-transform: uppercase;
 }
-.password {
+.login-password {
   height:40px;
   width:160px;
   border:2px solid green;
@@ -101,12 +134,14 @@ font-weight: bold;
 margin: 3px;
 text-transform: uppercase;
 }
+
 .login-button:hover {
-  background-color: yellow;
-  color: purple;
+  background-color: #b0e0e6;
+  color: #f7347a;
   font-size: 14px;
   font-weight: 600;
 }
+
 .login-redirect {
   display: block;
   font-size: 38px;
@@ -120,6 +155,7 @@ text-transform: uppercase;
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
+
 .sidenav {
   height: 100%;
   width: 0px;
@@ -142,6 +178,7 @@ text-transform: uppercase;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: hotpink;
 }
 
 #signUpLink {
@@ -153,7 +190,25 @@ text-transform: uppercase;
   text-decoration: underline;
 }
 
-.username {
+.signup-username {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.signup-email {
+  height:40px;
+  width:160px;
+  border:2px solid green;
+  font-weight: bold;
+  margin: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.signup-password {
   height:40px;
   width:160px;
   border:2px solid green;
@@ -172,12 +227,14 @@ font-weight: bold;
 margin: 3px;
 text-transform: uppercase;
 }
+
 .signup-button:hover {
-  background-color: yellow;
-  color: purple;
+  background-color: #b0e0e6;
+  color: #f7347a;
   font-size: 14px;
   font-weight: 600;
 }
+
 .sign-up-form {
   display: flex;
   align-items: center;
@@ -193,6 +250,7 @@ text-transform: uppercase;
   text-align: center;
   text-transform: uppercase;
 }
+
 .mobile {
   height:40px;
   width:160px;
@@ -202,6 +260,7 @@ text-transform: uppercase;
   text-align: center;
   text-transform: uppercase;
 }
+
 .address {
   height:40px;
   width:160px;
@@ -211,6 +270,7 @@ text-transform: uppercase;
   text-align: center;
   text-transform: uppercase;
 }
+
 .create-profile-button {
   height: 40px;
   width: 160px;
@@ -221,22 +281,19 @@ text-transform: uppercase;
   margin: 3px;
   text-transform: uppercase;
 }
+
 .create-profile-button:hover {
-  background-color: yellow;
-  color: purple;
+  background-color: #b0e0e6;
+  color: #f7347a;
   font-size: 14px;
   font-weight: 600;
-}
-
-.content {
-
 }
 
 li {
   list-style: disc;
 }
 
-.title{
+.title {
   height:40px;
   width:160px;
   border:2px solid green;
@@ -245,7 +302,8 @@ li {
   text-align: center;
   text-transform: uppercase;
 }
-.description{
+
+.description {
   height:40px;
   width:160px;
   border:2px solid green;
@@ -254,7 +312,8 @@ li {
   text-align: center;
   text-transform: uppercase;
 }
-.post-button{
+
+.post-button {
   height: 40px;
   width: 160px;
   color: green;
@@ -264,9 +323,27 @@ li {
   margin: 3px;
   text-transform: uppercase;
 }
+
 .post-button:hover {
-  background-color: yellow;
-  color: purple;
+  background-color: #b0e0e6;
+  color: #f7347a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.delete-post-button {
+  height: 40px;
+  width: 160px;
+  color: green;
+  background-color: lightgray;
+  display: inline;
+  font-weight: bold;
+  margin: 3px;
+  text-transform: uppercase;
+}
+.delete-post-button:hover {
+  background-color: #b0e0e6;
+  color: #f7347a;
   font-size: 14px;
   font-weight: 600;
 }
