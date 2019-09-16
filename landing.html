@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
   <link rel="stylesheet" href="./styles/style.css">
   <link href="https://fonts.googleapis.com/css?family=Eczar|Gayathri&display=swap" rel="stylesheet">
   <title>the Vyne</title>
@@ -16,27 +16,14 @@
     <!-- Login form -->
     <div class="login-form">
         <form onSubmit = "createLogin(event)" class="loginForm">
-          <input type="text" class="email" placeholder="email"/>
-          <input type="password" class="password" placeholder="password"/>
+          <input type="text" class="login-email" placeholder="email"/>
+          <input type="password" class="login-password" placeholder="password"/>
           <input type="submit" value="Login" class="login-button"/>
         </form>
 
-      <p class="login-redirect">New here? <span id="signUpLink" onclick="openNav()">Click</span> to sign up!</p>
-    </div>
-    <div class="sign-up-form">
-      <form onSubmit="postData(event)" class="signupForm">
-          <input type="text" class="email" placeholder="email"/>
-          <input type="password" class="password" placeholder="password"/>
-          <input type="text" class="username" placeholder="username"/>
-          <input class="signup-button" type="submit" value="Sign up!"/>
-      </form>
-        </div>
-      
-      <ul class="posts">
-      </ul>
+    <p class="login-redirect">New here? <span id="signUpLink" onclick="openNav()">Click</span> to sign up!</p>
 
-</body>
-</html>
+    </div>
   </div>
 
 <!-- SIDEBAR POP OUT FOR SIGN UP -->
@@ -44,10 +31,10 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <!-- Sign up form -->
     <div class="sign-up-form">
-      <form onSubmit="postData(event)" class="signupForm">
-          <input type="text" class="email" placeholder="email"/>
-          <input type="password" class="password" placeholder="password"/>
-          <input type="text" class="username" placeholder="username"/>
+      <form onSubmit="signUp(event)" class="signupForm">
+          <input type="text" class="signup-email" placeholder="email"/>
+          <input type="password" class="signup-password" placeholder="password"/>
+          <input type="text" class="signup-username" placeholder="username"/>
           <input class="signup-button" type="submit" value="Sign up!"/>
       </form>
     </div>

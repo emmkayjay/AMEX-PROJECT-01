@@ -1,4 +1,68 @@
-<<<<<<< HEAD
+function signUp(event) {
+     event.preventDefault();
+     const email = document.querySelector('.signup-email');
+     const password = document.querySelector('.signup-password');
+     const username = document.querySelector('.signup-username');
+     fetch('http://thesi.generalassemb.ly:8080/signup', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 email: email.value,
+                 password: password.value,
+                 username: username.value
+             })
+     })
+
+     .then((res) => {
+         return res.json();
+         console.log(res);
+     })
+     .then((res) => {
+        localStorage.setItem('user', res.token);
+        console.log(res);
+          if(res.httpStatus !== 'BAD_REQUEST') {
+
+            // window.location.href = "home.html";
+            } else {
+              // localStorage.clear();
+              window.alert("Please try again");
+            }
+})
+ .catch((err) => {
+         console.log(err);
+     })
+  }
+
+
+function createLogin(event) {
+   event.preventDefault();
+   const email = document.querySelector('.login-email');
+   const password = document.querySelector('.login-password');
+   fetch('http://thesi.generalassemb.ly:8080/login', {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json'
+           },
+           body: JSON.stringify({
+               email: email.value,
+               password: password.value
+           })
+   })
+   .then((res) => {
+       return res.json();
+   })
+   .then((res) => {
+       const loginForm=document.querySelector(".loginForm");
+       window.location.href = "home.html";
+})
+   .catch((err) => {
+       console.log(err);
+     })
+  }
+
+
 function listPosts() {
     document.querySelector("#wall");
     fetch('http://thesi.generalassemb.ly:8080/post/list', {
@@ -29,68 +93,19 @@ function listPosts() {
     })
 }
 listPosts();
-=======
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
-function postData(event) {
-     event.preventDefault();
-     const email = document.querySelector('.email');
-     const password = document.querySelector('.password');
-     const username = document.querySelector('.username');
-     fetch('http://thesi.generalassemb.ly:8080/signup', {
-             method: 'POST',
-             headers: {
-                 'Content-Type': 'application/json'
-             },
-             body: JSON.stringify({
-                 email: email.value,
-                 password: password.value,
-                 username: username.value
-             })
-     })
 
-     .then((res) => {
-         return res.json();
-         console.log(res);
-     })
-     .then((res) => {
-        localStorage.setItem('user', res.token);
-        console.log(res);
-        localStorage.setItem('user', res.token);
-          if(res.httpStatus !== 'BAD_REQUEST') {
-<<<<<<< HEAD
-            window.location.href = "home.html";
-            } else {
-              localStorage.clear();
-            }
-})
-=======
-            window.location.href = "content-page.html";
-            }else{
-              localStorage.clear();
-            }
 
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
-     .catch((err) => {
-         console.log(err);
-     })
-  }
-<<<<<<< HEAD
-=======
-
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
-  function updateDom() {
-     document.querySelector('.signupForm').style.display = "none";
-     document.querySelector('.postForm').style.display = "block";
+  function updateDom(data) {
+     // document.querySelector('.signupForm').style.display = "none";
+     // document.querySelector('.postForm').style.display = "block";
      fetch("http://thesi.generalassemb.ly:8080/user/post", {
          headers: {
              "Authorization": "Bearer " + localStorage.getItem('user')
          }
      })
-
      .then((res) => {
          return res.json();
      })
-
      .then((res) => {
          const list = document.querySelector('.posts');
          for (let i = 0; i < res.length; i++) {
@@ -113,6 +128,10 @@ function createPost(event) {
    event.preventDefault();
    const title = document.querySelector('.title');
    const description = document.querySelector('.description');
+   const item = document.createElement('li');
+   const postTitle = document.createElement('h3');
+   const postDescription = document.createElement('p');
+
    fetch("http://thesi.generalassemb.ly:8080/post", {
        method: 'POST',
        headers: {
@@ -123,53 +142,23 @@ function createPost(event) {
            title: title.value,
            description: description.value
        })
+
    })
    .then((res) => {
        console.log(res);
        updateDom(res);
+for (let i = 0; i < res.length; i++);
+       item.appendChild(postTitle);
+       item.appendChild(postDescription);
+       title.innerText = res[i].title;
+       description.innerText = res[i].description;
+       list.appendChild(item);
    })
    .catch((err) => {
        console.log(err);
   })
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
-function createLogin(event) {
-   event.preventDefault();
-   const email = document.querySelector('.email');
-   const password = document.querySelector('.password');
-   fetch('http://thesi.generalassemb.ly:8080/login', {
-           method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               email: email.value,
-               password: password.value
-           })
-   })
-   .then((res) => {
-       return res.json();
-   })
-<<<<<<< HEAD
-=======
-
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
-   .then((res) => {
-       const loginForm=document.querySelector(".loginForm");
-       loginForm.style.display="none";
-})
-
-   .catch((err) => {
-       console.log(err);
-     })
-  }
-<<<<<<< HEAD
-=======
-
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
   function createProfile(event) {
      event.preventDefault();
      const addemail = document.querySelector('.addemail');
@@ -186,41 +175,24 @@ function createLogin(event) {
                  address: address.value
              })
      })
-<<<<<<< HEAD
-=======
-
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
   .then((res) => {
          return res.json();
          console.log(res);
      })
-<<<<<<< HEAD
   .then((res) => {
     localStorage.setItem('user', res.token);
          console.log(res)
      })
-=======
-
-  .then((res) => {
-  	localStorage.setItem('user', res.token);
-         console.log(res)
-     })
-
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
      .catch((err) => {
          console.log(err);
      })
   }
-<<<<<<< HEAD
 
 
 // CONTROLS FOR SIGNUP FORM BAR, DO NOT TOUCH
   function openNav() {
     document.getElementById("signUpPopOut").style.width = "280px";
   }
-
   function closeNav() {
     document.getElementById("signUpPopOut").style.width = "0";
   }
-=======
->>>>>>> d184048ebe89b38aa9a4e0a7336a348825a25c27
