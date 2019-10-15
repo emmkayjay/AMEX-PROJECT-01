@@ -136,12 +136,13 @@ function postData(event) {
             }
 })
 
-            window.location.href = "content-page.html";
-            }else{
-
-              localStorage.clear();
-            }
-})
+            // window.location.href = "content-page.html";
+            //
+            // else{
+            //
+            //   localStorage.clear();
+            // }
+}
 
 
 
@@ -242,7 +243,7 @@ for (let i = 0; i < res.length; i++);
 
 // CONTROLS FOR SIGNUP FORM BAR, DO NOT TOUCH
   function openNav() {
-    document.getElementById("signUpPopOut").style.width = "280px";
+    document.getElementById("signUpPopOut").style.width = "190px";
   }
   function closeNav() {
     document.getElementById("signUpPopOut").style.width = "0";
